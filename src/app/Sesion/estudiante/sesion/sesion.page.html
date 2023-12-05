@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Sesion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="view">
+          <ion-icon name="eye"></ion-icon>
+          Ver
+        </ion-tab-button>
+        <ion-tab-button tab="create">
+          <ion-icon name="create"></ion-icon>
+          Diligenciar
+        </ion-tab-button>
+        <ion-tab-button (click)="LogOut()">
+          <ion-icon name="power"></ion-icon>
+          LogOut
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-content>  
+</ion-content>

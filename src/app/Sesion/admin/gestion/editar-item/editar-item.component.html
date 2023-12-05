@@ -1,0 +1,74 @@
+<ion-content>
+  <ion-grid *ngFor="let AnteP of Lista_Ap">
+    <div>
+      <ion-row style="background-color: rgb(77, 28, 28);">
+        <ion-col>Nombre del AnteProyecto</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col style="background-color: brown;">Contenido</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>{{AnteP.Nombre}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col style="background-color: brown;">Acción</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button color="success" (click)="Editar_AnteProyecto_Nombre(AnteP.Nombre)" >Actually</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          ...
+        </ion-col>
+      </ion-row>
+      <ion-row style="background-color:  rgb(77, 28, 28);">
+        <ion-col>Contenido del AnteProyecto</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col style="background-color: brown;">Contenido</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>{{AnteP.Descripcion}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col style="background-color: brown;">Acción</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button color="success" (click)="Editar_AnteProyecto_Cont(AnteP.Descripcion)">Actually</ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+    <ion-row>
+      <ion-col>
+        ...
+      </ion-col>
+    </ion-row>
+    <div *ngFor="let I of Lista_Item">
+      <div *ngIf="AnteP.ID_Estudiante == I.ID_Estudiante">
+        <ion-row style="background-color:cadetblue;">
+          <ion-col>Nombre del Item</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>{{I.Nombre}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="background-color: cadetblue;">Contenido del Item</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>{{I.Contenido}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="background-color: cadetblue;">Acción</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button color="success" (click)="Editar_Item(I.Nombre, I.ID_Estudiante)">Actually</ion-button>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </ion-grid>
+</ion-content>

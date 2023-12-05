@@ -1,0 +1,31 @@
+<ion-card>
+  <img alt="Silhouette of mountains" width="200px" src="https://www.iconpacks.net/icons/1/free-user-login-icon-305-thumb.png" />
+  <ion-card-header class="header-login">
+    <ion-card-title>Inicio de Sesión</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+
+    <form [formGroup]="Registro">
+      <ion-item class="box-form">
+        <ion-label>
+          <ion-icon name="person"></ion-icon>
+        </ion-label>
+        <ion-input type="email" ngModel text formControlName="Email" placeholder="Email"></ion-input>
+      </ion-item>
+  
+      <ion-item class="box-form">
+        <ion-label>
+          <ion-icon name="keypad-outline"></ion-icon>
+        </ion-label>
+        <ion-input type="password" ngModel password formControlName="Password" placeholder="Password"></ion-input>
+      </ion-item>
+      <h5 color="danger">(Debe contener más de 8 caracteres)</h5>
+  
+      <section class="enlace-ingreso">
+        <ion-button (click)="ingresar()" expand="block" class="boton">Ingresar</ion-button>
+      </section>
+    </form>
+
+  </ion-card-content>
+</ion-card>

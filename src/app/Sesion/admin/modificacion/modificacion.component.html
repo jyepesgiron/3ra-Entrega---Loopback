@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title>Modificar de Item's</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let info of Listado">
+      <i>{{info.Nombre}}</i><ion-button slot="end" (click)="op(info.id)">Click</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

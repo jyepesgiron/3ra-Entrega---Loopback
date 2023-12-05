@@ -1,0 +1,25 @@
+<ion-content>
+  <ion-toolbar color="success">
+    <ion-title>Revisión de Item's</ion-title>
+  </ion-toolbar>
+  <ion-grid>
+    <div *ngFor="let data of ListaAP">
+      <ion-toolbar color="danger">
+        <ion-title>{{data.Nombre}}</ion-title>
+      </ion-toolbar>
+      <div>
+        <ion-row>
+          <ion-col size="auto" style="align-items: center; justify-content: center; text-align: center;"><b style="width: 110px;">ITEM</b></ion-col>
+          <ion-col style="align-items: center; justify-content: center; text-align: center;"><b>CONTENIDO</b></ion-col>
+        </ion-row>
+        <div *ngFor="let info of Lista_aux">
+          <ion-row *ngIf="info.ID_Estudiante == data.ID_Estudiante">
+            <ion-col size="auto"><div style="width: 110px;">{{info.Nombre}}</div></ion-col>
+            <ion-col><i>{{info.Contenido}}</i></ion-col>
+          </ion-row>
+        </div>
+        <br>
+      </div>
+    </div>
+  </ion-grid>
+</ion-content>

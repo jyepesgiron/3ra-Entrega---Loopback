@@ -1,0 +1,49 @@
+<ion-app>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-title>Opciones</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-list>
+        <ion-menu-toggle auto-hide="false">
+          <ion-item routerDirection="root" [routerLink]="['/Gestion/Gestion']" routerLinkActive="router-link-active" lines="none" detail="false"  routerLinkActive="selected">
+            <ion-icon name="library-outline"></ion-icon>
+            <ion-label>Gestión de Ítems</ion-label>
+          </ion-item>
+          <br>
+          <ion-item routerDirection="root" [routerLink]="['/Gestion/Revision']" routerLinkActive="router-link-active" lines="none" detail="false"  routerLinkActive="selected">
+            <ion-icon name="information-circle-outline"></ion-icon>
+            <ion-label>Revisión de Ítems</ion-label>
+          </ion-item>
+          <br>
+          <ion-item routerDirection="root" [routerLink]="['/Gestion/Modificacion']" routerLinkActive="router-link-active" lines="none" detail="false"  routerLinkActive="selected">
+            <ion-icon name="document-text-outline"></ion-icon>
+            <ion-label>Modificación de Estado</ion-label>
+          </ion-item>
+          <br>
+          <ion-item lines="none" detail="false" routerLinkActive="selected" (click)="LogOut()">
+            <ion-icon name="log-out"></ion-icon>
+            <ion-label>Cerrar Sesión</ion-label>
+          </ion-item>
+          <br>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Administrador</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding"> 
+      <ion-router-outlet id="Inicio"></ion-router-outlet>
+    </ion-content>
+  </div>
+</ion-app>

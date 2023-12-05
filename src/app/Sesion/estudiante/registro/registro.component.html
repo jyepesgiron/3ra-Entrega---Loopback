@@ -1,0 +1,18 @@
+<form [formGroup]="Information">
+  <ion-list>
+    <ion-item>
+      <ion-input labelPlacement="floating" formControlName="Nombre">
+        <div slot="label">Nombre del Anteproyecto<ion-text color="danger">(Required)</ion-text></div>
+      </ion-input>
+    </ion-item> 
+    <!----------------->
+    <ion-item>
+      <ion-textarea labelPlacement="floating" style="height: 190px" formControlName="Descripcion">
+        <div slot="label">Descripción<ion-text color="danger">(Required)</ion-text></div>
+      </ion-textarea>
+    </ion-item>
+  </ion-list>
+</form>
+    <!--[routerLink]="['/Funcion/sesion']" routerLinkActive="router-link-active"-->
+<ion-button color="success" expand="block" (click)="Registrar()" >Ingresar</ion-button>
+<ion-chip (click)="LogOut()">LogOut</ion-chip>

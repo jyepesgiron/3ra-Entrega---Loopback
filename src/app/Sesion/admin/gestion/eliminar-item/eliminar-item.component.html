@@ -1,0 +1,19 @@
+
+<ion-content>
+  <!--
+  <ion-list>
+    <ion-item *ngFor="let Dato of Datos_Apartado">
+      <ion-checkbox label-placement="stacked" alignment="center">
+        <h3>{{Dato.Nombre}}</h3>
+      </ion-checkbox>
+    </ion-item>
+  </ion-list>-->  
+
+  <ion-list>
+    <ion-item *ngFor="let option of Apartado2">
+      <ion-label>{{ option.Nombre }}</ion-label>
+      <ion-checkbox [(ngModel)]="option.isChecked" (ionChange)="handleCheckboxChange(option.isChecked, option)"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-button fill="outline" (click)="Action()">Eliminar</ion-button>
